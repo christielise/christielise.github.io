@@ -32,7 +32,7 @@ body {
   background: #f7eee7;
 }
 
-a {
+a.sidebar {
   color: #000;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -43,7 +43,7 @@ a {
     text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
+a.sidebar:hover, a.sidebar:active, a.sidebar:focus {
   /*background-image:
      linear-gradient(
        to bottom, var(--mainColor) 0%,
@@ -114,7 +114,11 @@ h5 {
   text-align: center;
 }
 
-a.go-to-about:hover, a.go-to-about:active, a.go-to-about:focus {
+a {
+  color: #000;
+}
+
+a:hover, a:active, a:focus {
   /*background-image:
      linear-gradient(
        to bottom, var(--mainColor) 0%,
@@ -809,9 +813,9 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 
 .btn-primary {
-  background: #70abde;
+  background: #000;
   color: #fff;
-  border: 2px solid #70abde;
+  border: 2px solid #000;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #279bab !important;
@@ -821,7 +825,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-primary.btn-outline {
   background: transparent;
   color: #228896;
-  border: 2px solid #228896;
+  border: 0px solid #228896;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
   background: #228896;
@@ -1079,6 +1083,23 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   margin: 0 0 1em;
   width: 100%;
 }
+.card-illustrations {
+  /* Add shadows to create the "card" effect */
+  transition: 0.3s;
+  background-color: #ffffff00;
+  overflow-y: hidden;
+}
+.illustrations-img {
+  transition: 0.3s;
+}
+
+.illustrations-img:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 .card {
   /* Add shadows to create the "card" effect */
   transition: 0.3s;
@@ -1115,10 +1136,13 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   transition: 0.3s;
 }
 
-.hover-shadow:hover {opacity: 0.7;
-  -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);}
+.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  border: 3px solid #000;
+}
 
 
 @media screen and (max-width: 768px) {
