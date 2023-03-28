@@ -7,13 +7,15 @@
 }
 @font-face {
   font-family: 'karn';
-  src: url("../fonts/karn/karn.ttf?srf3rx") format("truetype");
+  src: url("../fonts/karn/karn.ttf");
+  src: url("../fonts/karn/karn.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'mangoli';
-  src: url("../fonts/mangoli/mangoli.ttf?srf3rx") format("truetype");
+  src: url("../fonts/karn/karn.ttf");
+  src: url("../fonts/mangoli/mangoli.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
