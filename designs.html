@@ -112,7 +112,7 @@
 					</div>
           <div class="animate-box row col-md-12">
             <div class="loading-spinner" id="loading" style="text-align: center;">
-              <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+              <div class="lds-facebook"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
             </div>
           </div>
         </div>
@@ -148,6 +148,7 @@
         if (loadedImages === 28) { // all images have been loaded
           // hide the loading spinner
           document.getElementById('loading').style.display = 'none';
+          document.getElementById('masonry').style.display = 'block';
         }
       }
 
@@ -194,6 +195,13 @@
             </div>
           `
         );
+
+        var imgModal = document.getElementById("img01");
+        var img = document.getElementById(imageUrl);
+        img.onclick = function () {
+          imgModal.src = imageUrl;
+          openModal();
+        };
       });
 
       $("#imagesDiv").append(`
