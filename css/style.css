@@ -197,6 +197,7 @@ figure figcaption {
   bottom: 0;
   top: 0;
   right: 0;
+  z-index: 2;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -312,6 +313,7 @@ figure figcaption {
 }
 
 #fh5co-main {
+  z-index: 1;
   width: 80%;
   float: left;
   -webkit-transition: 0.5s;
