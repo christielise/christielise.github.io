@@ -197,7 +197,6 @@ figure figcaption {
   bottom: 0;
   top: 0;
   right: 0;
-  z-index: 1001;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -1144,6 +1143,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   border: 3px solid #000;
 }
 
+@media screen and (max-width: 1000px) {
+  #fh5co-main {
+    width: 50%;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   #fh5co-aside {
@@ -1234,5 +1239,40 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   }
   .row-bottom-padded-sm {
     padding-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #fh5co-main .fh5co-heading {
+    font-size: 35px;
+    margin-bottom: 0px;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  .masonry {
+    padding-top: 1rem;
+    column-count: 2;
+  }
+  .fh5co-narrow-content {
+    padding-bottom: 0px !important;
+  }
+  #aboutme {
+    padding-top: 0px !important;
+  }
+  .fh5co-heading .animate-box .fadeInUp .animated {
+      margin-top: 0px;
+  }
+  .go-to-about {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #fh5co-main .fh5co-heading {
+    font-size: 45px;
   }
 }

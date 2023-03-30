@@ -69,6 +69,11 @@
           <h6 class="fh5co-heading animate-box row col-md-10" data-animate-effect="fadeInLeft" style="padding-top: 20px;">
             <a href="../illustrations.html"><i class="icon-arrow-left"></i>photorealistic</a>
           </h6>
+          <div class="animate-box row col-md-12">
+            <div class="loading-spinner" id="loading" style="text-align: center;">
+              <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
         </div>
         <div class="fh5co-narrow-content" style="padding-top: 0 !important">
           <div
@@ -136,6 +141,15 @@
     <script src="../js/salvattore.js"></script>
 
     <script>
+      let loadedImages = 0;
+      function imageLoaded(img) {
+        loadedImages++;
+        if (loadedImages === 15) { // all images have been loaded
+          // hide the loading spinner
+          document.getElementById('loading').style.display = 'none';
+        }
+      }
+
       var listFiles = [
         "../images/illustrations/p1.png",
         "../images/illustrations/p2.png",
@@ -164,7 +178,7 @@
                 <div class="item hover-shadow" id="imagesDiv">
                     <img id="` +
             imageUrl +
-            `" class="img-responsive" src="` +
+            `" class="img-responsive" onload="imageLoaded(this)" src="` +
             imageUrl +
             `" alt="Christiana Steenstra Home Drawing">
                 </div>

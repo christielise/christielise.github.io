@@ -110,6 +110,11 @@
 						<br />
 						<p>Graphics made for commercial use</p>
 					</div>
+          <div class="animate-box row col-md-12">
+            <div class="loading-spinner" id="loading" style="text-align: center;">
+              <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
+          </div>
         </div>
         <div class="fh5co-narrow-content" style="padding-top: 0 !important">
           <div
@@ -137,6 +142,15 @@
     <script src="js/salvattore.js"></script>
 
     <script>
+      let loadedImages = 0;
+      function imageLoaded(img) {
+        loadedImages++;
+        if (loadedImages === 28) { // all images have been loaded
+          // hide the loading spinner
+          document.getElementById('loading').style.display = 'none';
+        }
+      }
+
       var listFiles = [
         "images/designs/designs1.png",
         "images/designs/designs2.png",
@@ -175,22 +189,11 @@
       listFiles.forEach(function (imageUrl) {
         $("#masonry").append(
           `
-                <div class="item" id="imagesDiv">
-                    <img id="` +
-            imageUrl +
-            `" class="img-responsive hover-shadow" src="` +
-            imageUrl +
-            `" alt="Christiana Steenstra Home Drawing">
-                </div>
-            `
+            <div class="item" id="imagesDiv">
+                  <img id="` +imageUrl +`" class="img-responsive hover-shadow" onload="imageLoaded(this)" src="` +imageUrl +`" alt="Christiana Steenstra Drawing">
+            </div>
+          `
         );
-
-        var imgModal = document.getElementById("img01");
-        var img = document.getElementById(imageUrl);
-        img.onclick = function () {
-          imgModal.src = imageUrl;
-          openModal();
-        };
       });
 
       $("#imagesDiv").append(`
