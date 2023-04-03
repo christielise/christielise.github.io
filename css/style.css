@@ -197,7 +197,6 @@ figure figcaption {
   bottom: 0;
   top: 0;
   right: 0;
-  z-index: 2;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -1271,12 +1270,6 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   }
   .go-to-about {
     margin-bottom: 0px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  #fh5co-main .fh5co-heading {
-    font-size: 45px;
   }
 }
 
